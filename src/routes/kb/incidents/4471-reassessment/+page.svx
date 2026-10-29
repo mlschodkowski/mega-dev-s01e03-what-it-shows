@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 reassessed: split by cause'
 owner: Codex harness for mlschodkowski
-status: proposed
+status: closed
 reviewed: '2026-10-29'
 signature: 'Codex · mlschodkowski · S01E03'
 ---
@@ -16,8 +16,22 @@ signature: 'Codex · mlschodkowski · S01E03'
 </script>
 
 The [original incident page](/kb/incidents/4471) says one issue and one queued fix.
-The exported logic shows two distinct causes. Split the work into a parser issue and a
-booking-form hint issue. A queued fix is not evidence that either problem is resolved.
+The exported logic shows two distinct causes. We split them into a
+[parser issue](https://github.com/mlschodkowski/mega-dev-s01e03-what-it-shows/issues/1) and a
+[booking-form hint issue](https://github.com/mlschodkowski/mega-dev-s01e03-what-it-shows/issues/2).
+
+## Engineering update: 5 October 2026
+
+The [course's engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update)
+reports #4471 closed on 5 October:
+
+- **Parser: fixed.** Engineering reports `fix(dates): parse dd/mm for eu locales`.
+  Close the parser issue as completed.
+- **Hint: won't fix.** Engineering retired the booking-v3 form.
+  Close the hint issue as not planned. Retirement is not a code fix for the hint.
+
+These are reported engineering outcomes. We have not inspected a production deployment.
+The historical export counts below remain useful even after the tickets close.
 
 <Reassessment />
 
@@ -54,8 +68,10 @@ unclear symptom, keep the report separate until the desk has the missing evidenc
 
 ## Scope and limits
 
-This page reclassifies the exported evidence. It does not change either booking path,
-fix a product, or verify a production release. The counts describe the 4 October export.
-The desk keeps working; reconcile later reports before treating these as current totals.
+This page reclassifies the exported evidence and records the later engineering outcomes.
+It does not change either booking path or verify a production release.
+The counts describe the 4 October export. Reconcile later reports before treating these
+as current totals. Engineering's closure does not supply the missing evidence for the
+five unresolved symptoms above.
 
 <RenderStamp {signature} />

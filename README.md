@@ -50,3 +50,7 @@ tenant locale and form, using the supplied `causeOf` logic.
 Issue drafts are in `issues/parser.md` and `issues/hint.md`. They cover 379 and 33
 unique reports respectively. Five unresolved symptoms remain within the parser
 count pending further evidence. No production product code has been changed.
+
+The course's later engineering update reports #4471 closed on 5 October 2026:
+parser fixed (`fix(dates): parse dd/mm for eu locales`); hint won't fix because
+booking-v3 was retired. These are distinct outcomes. The new page records both.

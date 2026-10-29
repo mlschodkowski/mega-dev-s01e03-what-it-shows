@@ -10,6 +10,12 @@ Do not classify from browser locale or intake tags: 23 of these reports were tag
 For example, R-41200 reports 7 April becoming 4 July; R-41201 reports the reverse direction.
 These are separate report IDs, so both count even though the reporter corrects their wording.
 
+**Engineering outcome (5 October 2026): fixed.** The course reports `fix(dates): parse dd/mm for eu locales`. Close as completed.
+
+Source: [course engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update).
+[Signed KB reassessment](https://github.com/mlschodkowski/mega-dev-s01e03-what-it-shows/blob/main/page.html); [other cause](https://github.com/mlschodkowski/mega-dev-s01e03-what-it-shows/issues/2).
+The export counts remain historical. We did not verify a production deployment.
+
 ## Why
 
 Dates such as `07/04/2026` can be read as 4 July instead of 7 April. People miss appointments and receive incorrect reminders.

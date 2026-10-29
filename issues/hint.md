@@ -9,6 +9,12 @@ Classify by the tenant directory and form channel. Intake guessed `parser` for 1
 R-41230, R-41241 and R-41251 illustrate this path. Shared subjects and browser locales do not establish the cause.
 App and email reports from these tenants belong to the separate parser issue.
 
+**Engineering outcome (5 October 2026): won't fix.** The course reports that booking-v3 was retired. Close as not planned; retirement does not mean the hint was fixed.
+
+Source: [course engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update).
+[Signed KB reassessment](https://github.com/mlschodkowski/mega-dev-s01e03-what-it-shows/blob/main/page.html); [other cause](https://github.com/mlschodkowski/mega-dev-s01e03-what-it-shows/issues/1).
+The export counts remain historical. We did not verify a production deployment.
+
 ## Why
 
 A customer who follows the displayed month-first hint supplies a date that the form reads in a different order.
