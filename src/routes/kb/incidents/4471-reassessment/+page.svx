@@ -4,7 +4,7 @@ title: '#4471 reassessed: split by cause'
 owner: Codex harness for mlschodkowski
 status: closed
 reviewed: '2026-10-29'
-signature: 'Codex · mlschodkowski · S01E03'
+signature: "v1.eyJzdWIiOiIyODkwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyNzc4MDYsImV4cCI6MTc5MzM2NDIwNn0.TawqcSA6fcxeILiX3L6-57opwiPTrUzlyNSckB2IVMU"
 ---
 
 <script>
