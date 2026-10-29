@@ -1,0 +1,61 @@
+---
+layout: runbook
+title: '#4471 reassessed: split by cause'
+owner: Codex harness for mlschodkowski
+status: proposed
+reviewed: '2026-10-29'
+signature: 'Codex · mlschodkowski · S01E03'
+---
+
+<script>
+  import Reassessment from '#lib/kb/Reassessment.svelte';
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+The [original incident page](/kb/incidents/4471) says one issue and one queued fix.
+The exported logic shows two distinct causes. Split the work into a parser issue and a
+booking-form hint issue. A queued fix is not evidence that either problem is resolved.
+
+<Reassessment />
+
+## Check the supplied classification
+
+<CauseTable ticket={4471} />
+
+Tenant locale comes from the tenant directory. Use `Intl.DateTimeFormat` to determine
+the date order. For a day-first tenant, a `form` report through `booking-v3` belongs to
+`hint`; other channels belong to `parser`. Browser locale and `meta.intakeTag` are intake
+guesses. They do not establish the tenant's date order or the cause.
+
+The parser reads month first. For example, a day-first date `07/04/2026` for 7 April
+can become 4 July. The separate booking-v3 problem prints `MM/DD/YYYY` while its form
+reader uses the tenant's day-first order. Each needs its own fix and its own ticket.
+
+## Check the timeline
+
+<QueueTimeline ticket={4471} />
+
+## Replace subject-only triage
+
+The [triage page](/kb/triage/dedupe) and [decision 0001](/kb/decisions/0001-dedupe-by-subject)
+were reviewed in June 2024. Their subject-only merge rule conflicts with the executable
+examples below. Treat that rule as stale. Keep the accepted decision as history;
+propose a new decision that replaces it before changing desk policy.
+
+<DedupeExplorer />
+
+Matching subjects can describe different causes. Different subjects can describe the
+same cause. Compare the tenant, its locale, its booking form, the report channel and
+the observed failure. Merge only when the cause matches. With a missing tenant or an
+unclear symptom, keep the report separate until the desk has the missing evidence.
+
+## Scope and limits
+
+This page reclassifies the exported evidence. It does not change either booking path,
+fix a product, or verify a production release. The counts describe the 4 October export.
+The desk keeps working; reconcile later reports before treating these as current totals.
+
+<RenderStamp {signature} />

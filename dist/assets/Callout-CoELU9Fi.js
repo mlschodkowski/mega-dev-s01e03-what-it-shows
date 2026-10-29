@@ -1,0 +1,1 @@
+import{c as i,p as o,s as l,e as d}from"./runbook-DZX4SEKU.js";import{c as n,r as p,t as c,a as f,f as m}from"./render-CnduqQ7t.js";var v=m("<aside><!></aside>");function k(s,e){let t=o(e,"kind",3,"note");var a=v(),r=n(a);i(r,()=>e.children),p(a),c(()=>l(a,1,d(t()),"svelte-17bri61")),f(s,a)}export{k as C};

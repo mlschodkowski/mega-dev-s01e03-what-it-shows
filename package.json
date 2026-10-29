@@ -1,0 +1,15 @@
+{
+  "name": "s01e03-support-kb",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build && vite build --ssr render.js --outDir .render && node .render/render.js",
+    "dev": "vite --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "6.1.0",
+    "mdsvex": "0.12.6",
+    "svelte": "https://registry.npmjs.org/svelte/-/svelte-5.57.3.tgz",
+    "vite": "https://registry.npmjs.org/vite/-/vite-7.3.7.tgz"
+  }
+}
